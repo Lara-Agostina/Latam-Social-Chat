@@ -13,12 +13,18 @@ const confetiPorPais = {
     'Estados Unidos': ['#85A9FF', '#FFFFFF', '#FF8585']  // Azul, Blanco y Rojo
 };
 
-// 2. Aquí pones tus enlaces reales de Instagram
 const enlacesInstagram = {
-    'Argentina': 'https://ig.me/j/AbYTWNfKgOeL1bSa/',
-    'Paraguay':  'https://ig.me/j/AbbYJU9SxehLVAWl/',
-    'Uruguay':   'https://ig.me/j/AbYR1vHKAmnjQI5h/',
-    'México':    'https://ig.me/j/AbZS9fBQM641txz-/'
+    'Chat General':  'https://ig.me/j/TU_LINK_GLOBAL/',
+    'Argentina':     'https://ig.me/j/AbYTWNfKgOeL1bSa/',
+    'Paraguay':      'https://ig.me/j/AbbYJU9SxehLVAWl/',
+    'Uruguay':       'https://ig.me/j/AbYR1vHKAmnjQI5h/',
+    'México':        'https://ig.me/j/AbZS9fBQM641txz-/',
+    'Colombia':      'https://ig.me/j/TU_LINK_COLOMBIA/',
+    'Venezuela':     'https://ig.me/j/TU_LINK_VENEZUELA/',
+    'Cuba':          'https://ig.me/j/TU_LINK_CUBA/',
+    'Puerto Rico':   'https://ig.me/j/TU_LINK_PUERTO_RICO/',
+    'Panamá':        'https://ig.me/j/TU_LINK_PANAMA/',
+    'Estados Unidos': 'https://ig.me/j/TU_LINK_USA/'
 };
 
 document.querySelectorAll('.card').forEach(card => {
