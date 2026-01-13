@@ -134,3 +134,148 @@ header { text-align: center; padding: 50px 20px; }
     color: #000;
     transition: 0.3s;
 }
+
+.card[data-color="gen"]:hover { background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%); }
+.card[data-color="col"]:hover { background: linear-gradient(135deg, #fff9c4 0%, #e1f5fe 100%, #ffebee 100%); }
+.card[data-color="ven"]:hover { background: linear-gradient(135deg, #fffde7 0%, #e3f2fd 100%, #ffebee 100%); }
+.card[data-color="cub"]:hover { background: linear-gradient(135deg, #ffebee 0%, #ffffff 50%, #e3f2fd 100%); }
+.card[data-color="pur"]:hover { background: linear-gradient(135deg, #ffebee 0%, #ffffff 50%, #e3f2fd 100%); }
+.card[data-color="pan"]:hover { background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 50%, #ffebee 100%); }
+.card[data-color="usa"]:hover { background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 50%, #ffebee 100%); }
+
+/* Tarjeta Destacada (Chat General) */
+.card-featured {
+    grid-column: 1 / -1; /* Ocupa todas las columnas de la cuadrícula */
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: 4px solid #f0f0f0;
+    padding: 20px;
+}
+
+.card-featured .card-content {
+    display: flex;
+    flex-direction: row; /* En PC se ve horizontal */
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+.icon-large {
+    font-size: 6rem;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));
+    animation: pulse-icon 2s infinite ease-in-out;
+}
+
+.text-group {
+    max-width: 500px;
+}
+
+/* Ajuste para que en celulares se vea vertical */
+@media (max-width: 768px) {
+    .card-featured .card-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@keyframes pulse-icon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Sección Sugerencia */
+.suggest-section {
+    width: 90%;
+    max-width: 500px;
+    margin: 60px auto;
+}
+
+.suggest-card {
+    background: #fff;
+    border: 3px dashed #D0EFFF; /* Borde punteado muy cute */
+    border-radius: 40px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.suggest-card:hover {
+    transform: scale(1.05);
+    background: #f9faff;
+    border-color: #A2D2FF;
+}
+
+.icon-fly {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Modal (Ventana Emergente) */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px); /* Efecto vidrio empañado de fondo */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 40px;
+    border-radius: 40px;
+    width: 85%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: 2px solid #eee;
+    font-family: 'Fredoka', sans-serif;
+    outline: none;
+    font-size: 1rem;
+}
+
+.send-btn {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #FF85A1;
+    transform: translateY(-3px);
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
